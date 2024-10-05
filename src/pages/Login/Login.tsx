@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
-import React from "react";
-import logo from "@/assets/react.svg";
+import { Button } from '@/components/ui/button';
+import React from 'react';
+import logo from '@/assets/react.svg';
 
 export const Login: React.FC = () => {
   return (
@@ -19,7 +19,7 @@ export const Login: React.FC = () => {
           {/* <LoginForm /> */}
           <div className="my-5 flex items-center w-full">
             <div className="flex-grow border-t border-black me-2"></div>
-            <Button variant={"link"}>Forgot Password?</Button>
+            <Button variant={'link'}>Forgot Password?</Button>
             <div className="flex-grow border-t border-black ml-2"></div>
           </div>
         </div>

@@ -1,5 +1,5 @@
-import { z } from "zod";
-import { useQuery } from "react-query";
+import { z } from 'zod';
+import { useQuery } from 'react-query';
 
 export const QuizSchema = z.object({
   type: z.string(),
@@ -15,10 +15,10 @@ export type IQuizSchema = z.infer<typeof QuizSchema>;
 export const QuizService = {
   useGet: () => {
     return useQuery<IQuizSchema>({
-      queryKey: ["quiz"],
+      queryKey: ['quiz'],
       queryFn: async () => {
         const res = await fetch(
-          "https://opentdb.com/api.php?amount=10&type=multiple"
+          'https://opentdb.com/api.php?amount=10&type=multiple',
         );
         const data = await res.json();
         return QuizSchema.parse(data);
